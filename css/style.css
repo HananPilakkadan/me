@@ -787,7 +787,7 @@ footer .bottom small {
     position: fixed;
     right:0;
     top: -100%;
-    padding-top: 80px;
+    /* padding-top: 80px; */
     justify-content: center;
     background: linear-gradient(to bottom, #838383,#a5a4a4);
     width: 100%;
@@ -804,7 +804,7 @@ footer .bottom small {
     color: #fff;
   }
   .menu-active .nav-menu .menu {
-    height: 500px;
+    height: 400px;
     top: 100px;
   }
   .menu ul.social {
