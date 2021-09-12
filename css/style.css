@@ -904,7 +904,7 @@ footer .bottom small {
 
 @media all and (max-width: 480px) {
   .menu-active .menu {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
   }
   .update {
     padding: 50px 100px;
