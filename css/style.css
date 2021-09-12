@@ -788,7 +788,7 @@ footer .bottom small {
     position: fixed;
     right:0;
     top:-100%;
-    padding-top: 10%;
+    padding: 10% 0 4% 0;
     justify-content: center;
     background: linear-gradient(to bottom, #838383,#a5a4a4);
     border-bottom-left-radius: 25px;
@@ -823,7 +823,7 @@ footer .bottom small {
     padding:20px 0;
     width: 50%;
     margin: 0 auto;
-    border-bottom: 2px dashed rgba(38, 38, 38, 0.3);
+    border-bottom: 1px dashed rgba(38, 38, 38, 0.3);
   }
   .menu-active .menu li:last-child {
     border:none;
