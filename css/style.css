@@ -57,6 +57,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment:fixed;
 }
 
 .menu-active {
@@ -427,12 +428,6 @@ h4 {
   margin-top: 50px;
 }
 
-.gallery p {
-  text-align: center;
-  margin-top: 20px;
-  color: gray;
-  font-size: 18px;
-}
 .image-box {
   padding: 0 400px;
   margin: 100px 0;
@@ -453,19 +448,17 @@ h4 {
   align-items: center;
   padding-left: 0;
 }
-.landscape ul li img{
-  width: 40%;
-}
+
 /* .images ul li {
   margin-right: 20px;
   margin-top: 20px;
 } */
 
 .images ul li img {
-  /* width:90%; */
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border-radius: 10px;
+  /* transform: skewY(10deg); */
 }
+
 .img1 {
   height: 230px;
 }
@@ -783,20 +776,18 @@ footer .bottom small {
   }
   .menu {
     display: block;
-    width: 100%;
-    height: 400px;
+    height: 300px;
     position: fixed;
-    right:0;
-    top:-100%;
-    padding: 10% 0 4% 0;
+    top: -100%;
+    right: 0;
+    padding-top: 80px;
     justify-content: center;
-    background: linear-gradient(to bottom, #838383,#a5a4a4);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    background-color: #7e7e7e;
+    width: 100%;
+    border-radius: 4px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
-   
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
   .alter-header .nav-menu .menu a {
     color: #454545;
@@ -805,11 +796,9 @@ footer .bottom small {
     color: #fff;
   }
   .menu-active .nav-menu .menu {
-    top:0;
+    top: 0;
   }
   .menu ul.social {
-    width: 60%;
-    margin: 30px auto 30px;
     display: block;
     display: flex;
     justify-content: center;
@@ -819,24 +808,8 @@ footer .bottom small {
     display: block;
     margin: 0 auto;
   }
-  .menu-active .menu li {
-    padding:20px 0;
-    width: 50%;
-    margin: 0 auto;
-    border-bottom: 1px dashed rgba(38, 38, 38, 0.3);
-  }
-  .menu-active .menu li:last-child {
-    border:none;
-  }
-  .menu-active .menu li:nth-child(4){
-    border: none;
-  }
-  .menu-active .menu li:first-child {
-    border:none;
-  }
-  .menu ul.social li {
-    border: none;
-    padding: 0;
+  header .nav-menu ul.menu li {
+    margin-bottom: 20px;
   }
   .header .nav-menu ul.menu li a {
     color: #cccccc;
@@ -904,7 +877,7 @@ footer .bottom small {
 
 @media all and (max-width: 480px) {
   .menu-active .menu {
-    padding-bottom: 15px;
+    padding-bottom: 30px;
   }
   .update {
     padding: 50px 100px;
