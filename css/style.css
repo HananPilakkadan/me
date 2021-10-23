@@ -58,7 +58,14 @@ ul {
   background-size: cover;
   background-position: center;
   background-attachment:fixed;
+  -webkit-background-attachment:fixed;
+  transition: .3s ease-in;
 }
+
+.sticky .home {
+  filter: opacity(.4);
+}
+
 
 .menu-active {
   overflow: hidden;
@@ -179,6 +186,11 @@ header .logo h1 img a {
 .main {
   height: 100vh;
   display: block;
+  transition: .2s ease-in;
+}
+
+.sticky .main {
+  filter: blur(4px);
 }
 
 .main-text {
