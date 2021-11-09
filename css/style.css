@@ -51,21 +51,12 @@ ul {
 
 .home {
   background: url(../images/img21.jpeg);
-  height: 100vh;
-  display: block;
-  background-position: bottom;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment:fixed;
-  -webkit-background-attachment:fixed;
-  transition: .3s ease-in;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: block;
 }
-
-.sticky .home {
-  filter: opacity(.4);
-}
-
 
 .menu-active {
   overflow: hidden;
@@ -186,7 +177,7 @@ header .logo h1 img a {
 .main {
   height: 100vh;
   display: block;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .sticky .main {
