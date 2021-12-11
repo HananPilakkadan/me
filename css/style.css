@@ -208,20 +208,6 @@ header .logo h1 img a {
   width: 50px;
   display: block;
 }
-.overlay {
-  visibility: hidden;
-  opacity: 0;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 22;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.219);
-  transition: 0.3s ease-in;
-}
 .main {
   height: calc(100vh - 100px);
   display: block;
@@ -898,10 +884,6 @@ footer .bottom small {
   }
   .menu-active .nav-menu .menu {
     right: 0;
-    visibility: visible;
-    opacity: 1;
-  }
-  .menu-active .overlay {
     visibility: visible;
     opacity: 1;
   }
