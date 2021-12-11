@@ -11,12 +11,6 @@ $(document).ready(function () {
   });
   wow.init();
 
-  const parallax = document.getElementById("home");
-  window.addEventListener("scroll", function () {
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.4 + "px";
-  });
-
   // header-sticky
   window.onscroll = function () {
     headerFunction();

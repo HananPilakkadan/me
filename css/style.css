@@ -44,7 +44,11 @@ a {
 a:hover {
   text-decoration: none;
 }
-
+.wrapper {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
 ul {
   list-style: none;
 }
@@ -56,6 +60,10 @@ ul {
   background-repeat: no-repeat;
   height: 100vh;
   display: block;
+  transition: 0.4s ease-in;
+}
+.sticky .home {
+  filter: opacity(0.4);
 }
 
 .menu-active {
@@ -75,7 +83,7 @@ header {
   padding: 0px 35px;
   align-items: center;
   height: 100px;
-  z-index: 4;
+  z-index: 44;
 }
 
 /* hamburger */
@@ -215,9 +223,10 @@ header .logo h1 img a {
   transition: 0.3s ease-in;
 }
 .main {
-  height: 100vh;
+  height: calc(100vh - 100px);
   display: block;
   transition: 0.2s ease-in;
+  padding-top: 200px;
 }
 
 .sticky .main {
@@ -227,7 +236,6 @@ header .logo h1 img a {
 .main-text {
   justify-content: center;
   display: flex;
-  margin-top: 200px;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -242,7 +250,7 @@ header .logo h1 img a {
 }
 
 .update {
-  padding: 100px;
+  padding: 100px 0;
 }
 
 .update h1 {
@@ -254,38 +262,72 @@ header .logo h1 img a {
 
 .update ul {
   display: flex;
-  width: 50%;
+  align-items: center;
+  justify-content: center;
   margin: 100px auto;
+  flex-wrap: wrap;
 }
 
 .update ul li {
-  width: 50%;
+  width: 25%;
   margin-right: 50px;
+  padding: 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: 0.3s ease-in;
+}
+.update ul li:hover {
+  transform: scale(1.02);
+  background: #474747;
+  border: 1px solid #f8f8f8;
 }
 
 .update ul li:last-child {
   margin-right: 0;
 }
 
+.update ul li .img-box {
+  width: 100%;
+}
 .update ul li img {
   width: 100%;
+  display: block;
   border-radius: 10px;
 }
 
 .update ul li h6 {
+  text-transform: uppercase;
   color: gray;
   font-size: 16px;
   font-weight: 500;
   margin: 20px 0;
 }
-
 .update ul li a.more {
-  color: #c3c3c3;
+  padding: 13px 25px;
+  background: #7a7a7a;
+  color: #f8f8f8;
   display: flex;
   align-items: center;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  transition: 0.3s ease-in;
+  width: 20%;
+}
+
+.update ul li a.more:hover {
+  width: 25%;
+}
+.update ul li a.more:hover i {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .update ul li span i {
+  transform: translateX(-10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in;
   margin-left: 10px;
 }
 
@@ -670,6 +712,16 @@ footer .bottom small {
 }
 
 @media all and (max-width: 1280px) {
+  .update ul li {
+    width: 38%;
+    margin-bottom: 36px;
+  }
+  .update ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .update ul li:last-child {
+    margin-bottom: 0;
+  }
   .about-info {
     width: 70%;
   }
@@ -685,11 +737,11 @@ footer .bottom small {
 }
 
 @media all and (max-width: 980px) {
+  .main {
+    padding-top: 30px;
+  }
   .menu li a {
     font-size: 18px;
-  }
-  .update ul {
-    width: 80%;
   }
   .image-box {
     padding: 0 100px;
@@ -734,8 +786,9 @@ footer .bottom small {
   header .hamburger {
     display: block;
   }
-  .update ul {
-    width: 90%;
+  .update ul li {
+    width: 80%;
+    margin-right: 0;
   }
   .update ul li a.more {
     font-size: 14px;
@@ -875,9 +928,6 @@ footer .bottom small {
 }
 
 @media all and (max-width: 640px) {
-  .update ul {
-    width: 100%;
-  }
   .update ul li img {
     margin-bottom: 0;
   }
@@ -921,9 +971,6 @@ footer .bottom small {
   .menu-active .menu {
     padding-bottom: 30px;
   }
-  .update {
-    padding: 50px 100px;
-  }
   .update h1 {
     font-size: 20px;
   }
@@ -932,7 +979,7 @@ footer .bottom small {
     margin-bottom: 0;
   }
   .update ul li {
-    width: 100%;
+    width: 80%;
     margin-bottom: 50px;
   }
   .update ul li :last-child {
@@ -1019,9 +1066,6 @@ footer .bottom small {
 }
 
 @media all and (max-width: 360px) {
-  .update {
-    padding: 50px 80px;
-  }
   .update h1 {
     font-size: 18px;
   }
@@ -1104,9 +1148,6 @@ footer .bottom small {
 }
 
 @media all and (max-width: 320px) {
-  .update {
-    padding: 50px 70px;
-  }
   .update h1 {
     font-size: 16px;
   }
