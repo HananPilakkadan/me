@@ -129,7 +129,28 @@ header .hamburger span:nth-child(3) {
   overflow: hidden;
   opacity: 0;
 }
+.sticky {
+  padding-top: 80px;
+}
+.sticky header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #262626;
+  animation: headyy 0.5s forwards;
+  box-shadow: rgba(68, 68, 68, 0.2) 0px 2px 8px 0px;
+}
 
+@keyframes headyy {
+  0% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .alter-header {
   height: 80px;
 }
@@ -165,12 +186,31 @@ header .hamburger span:nth-child(3) {
   margin-bottom: 0;
 }
 
+header .menu li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #262626;
+  visibility: hidden;
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out;
+}
+header .menu li:hover::after {
+  visibility: visible;
+  width: 100%;
+  transform: scaleX(1);
+}
 .menu .social li:first-child {
   margin-left: 0;
 }
 
 .menu li {
+  position: relative;
   margin-left: 30px;
+  padding-bottom: 6px;
 }
 
 .menu li img {
@@ -360,12 +400,20 @@ header .logo h1 img a {
   border-radius: 20px;
   padding-bottom: 50px;
 }
-
-h3 {
-  color: gray;
+.profile-info {
+  text-align: center;
   margin-left: 20px;
+}
+.profile-info h3 {
+  color: #bcbcbc;
+  font-size: 22px;
+  margin-bottom: 12px;
   font-weight: 500;
   line-height: 1.2em;
+}
+.profile-info span {
+  color: #868686;
+  font-size: 16px;
 }
 
 .about h1 {
@@ -403,14 +451,15 @@ h4 {
   max-width: 200px;
   border-radius: 100%;
   margin: 50px 0;
+  padding: 8px;
+  border: 2px dashed #bcbcbc;
 }
 
 .about-info {
   margin-left: 20px;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
-
 .about-info p {
   color: #bcbcbc;
   line-height: 25px;
