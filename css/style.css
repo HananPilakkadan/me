@@ -61,6 +61,8 @@ ul {
   height: 100vh;
   display: block;
   transition: 0.4s ease-in;
+  padding-top: 100px;
+  margin-top: -100px;
 }
 .sticky .home {
   filter: opacity(0.4);
@@ -79,8 +81,9 @@ ul {
   transition: all 0.5s ease-in-out;
 }
 
-header {
+header .wrapper {
   display: flex;
+  justify-content: space-between;
   padding: 0px 35px;
   align-items: center;
   height: 100px;
@@ -90,43 +93,51 @@ header {
 /* hamburger */
 header .hamburger {
   display: none;
-  position: relative;
   z-index: 99;
-  width: 30px;
-  background: #fff;
+  width: 35px;
 }
 header .hamburger span {
-  position: absolute;
+  display: block;
   width: 36px;
   height: 3px;
-  background: #000;
+  background: #262626;
   border-radius: 4px;
   transition: 0.4s ease-in;
+  -webkit-transition: 0.4s ease-in;
+}
+.sticky header .hamburger span {
+  background: #bcbcbc;
 }
 .menu-active header .hamburger span {
   background: #fff;
 }
 header .hamburger span:nth-child(1) {
   transform: translateY(-13px);
+  -webkit-transform: translateY(-13px);
   width: 25px;
 }
 header .hamburger span:nth-child(3) {
   transform: translateY(13px);
+  -webkit-transform: translateY(13px);
   width: 15px;
 }
 .menu-active header .hamburger span:nth-child(1) {
   width: 36px;
   transform: translateY(0) rotate(45deg);
+  -webkit-transform: translateY(0) rotate(45deg);
   transition-delay: 0.125s;
+  -webkit-transition-delay: 0.125s;
 }
 .menu-active header .hamburger span:nth-child(3) {
   width: 36px;
   transform: translateY(0) rotate(315deg);
+  -webkit-transform: translateY(0) rotate(315deg);
   transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
 }
 .menu-active header .hamburger span:nth-child(2) {
   transform: translateX(60px);
-  overflow: hidden;
+  -webkit-transform: translateX(60px);
   opacity: 0;
 }
 .sticky {
@@ -138,11 +149,20 @@ header .hamburger span:nth-child(3) {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 77;
   background: #262626;
   animation: headyy 0.5s forwards;
   box-shadow: rgba(68, 68, 68, 0.2) 0px 2px 8px 0px;
 }
-
+.sticky header .wrapper {
+  height: 75px;
+}
+.sticky header .menu li a {
+  color: #bcbcbc;
+}
+.sticky header .logo h1 img {
+  filter: invert(1);
+}
 @keyframes headyy {
   0% {
     transform: translateY(-60px);
@@ -185,7 +205,9 @@ header .hamburger span:nth-child(3) {
   margin-left: 20px;
   margin-bottom: 0;
 }
-
+.sticky header .menu li::after {
+  background-color: #bcbcbc;
+}
 header .menu li::after {
   content: "";
   position: absolute;
@@ -210,7 +232,7 @@ header .menu li:hover::after {
 .menu li {
   position: relative;
   margin-left: 30px;
-  padding-bottom: 6px;
+  padding-bottom: 10px;
 }
 
 .menu li img {
