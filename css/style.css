@@ -704,7 +704,7 @@ footer .bottom small {
 
 /* pre - loader style */
 
-.loader {
+#loader {
   position: fixed;
   top: 0;
   right: 0;
@@ -715,12 +715,12 @@ footer .bottom small {
   height: 100vh;
   background: #262626;
 }
-.loader.hidden {
+#loader.hidden {
   opacity: 0;
   visibility: hidden;
   transition: 2s ease-in;
 }
-.loader span {
+#loader span {
   width: 30px;
   height: 30px;
   background: #818181;
@@ -729,16 +729,16 @@ footer .bottom small {
   transition: all 0.3s ease-in-out;
   animation: loader 2s infinite;
 }
-.loader span:nth-child(1) {
+#loader span:nth-child(1) {
   animation-delay: 0.25s;
 }
-.loader span:nth-child(2) {
+#loader span:nth-child(2) {
   animation-delay: 0.5s;
 }
-.loader span:nth-child(3) {
+#loader span:nth-child(3) {
   animation-delay: 0.75s;
 }
-.loader span:last-child {
+#loader span:last-child {
   margin-right: 0;
   animation-delay: 1s;
 }

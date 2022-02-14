@@ -58,10 +58,15 @@ $(document).ready(function () {
       },
     },
   });
+
+
+
+
 });
 
 
 var loader = document.getElementById("loader");
-	window.addEventListener("load", function () {
-		loader.style.display = "none";
-	})
+window.addEventListener("load", function () {
+  console.log("kkkkk");
+  loader.style.display = "none";
+})
