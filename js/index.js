@@ -44,29 +44,19 @@ $(document).ready(function () {
       0: {
         items: 1,
       },
-      480: {
+      481: {
+        items: 2,
+      },
+      641: {
         items: 3,
-      },
-      360: {
-        items: 2,
-      },
-      600: {
-        items: 2,
       },
       1000: {
         items: 5,
       },
     },
   });
-
-
-
-
 });
-
-
 var loader = document.getElementById("loader");
 window.addEventListener("load", function () {
-  console.log("kkkkk");
   loader.style.display = "none";
-})
+});
