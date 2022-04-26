@@ -70,7 +70,7 @@ ul {
 }
 
 .home {
-    background: url(../images/background.JPG);
+    background: linear-gradient(to bottom, #000000ac, #525252b2), url(../images/background.JPG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
