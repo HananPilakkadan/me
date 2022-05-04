@@ -17,20 +17,22 @@ $(document).ready(function () {
   };
   var body = document.body;
   var sticky = body.offsetTop;
+  var header = $("header");
 
   function headerFunction() {
     if (window.pageYOffset > 100) {
-      body.classList.add("sticky");
+      header.addClass("sticky");
     } else {
-      body.classList.remove("sticky");
+      header.removeClass("sticky");
     }
   }
 
-  $(".hamburger").on("click", function () {
-    $("body").toggleClass("menu-active");
+  $("#navMenu").on("click", function () {
+    $(".nav-menu .menu").toggleClass("active");
+    $("#navMenu").toggleClass("active");
   });
   $(".main,.gallery").click(function () {
-    $("body").removeClass("menu-active");
+    $(".nav-menu .menu").removeClass("active");
   });
 
   $(".owl-carousel").owlCarousel({
