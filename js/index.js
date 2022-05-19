@@ -28,8 +28,9 @@ $(document).ready(function () {
   }
 
   $("#navMenu").on("click", function () {
-    $(".nav-menu .menu").toggleClass("active");
+    $(".nav-menu").toggleClass("active");
     $("#navMenu").toggleClass("active");
+    $(".overlay").toggleClass("active")
   });
   $(".main,.gallery").click(function () {
     $(".nav-menu .menu").removeClass("active");

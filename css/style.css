@@ -206,7 +206,7 @@ header #navMenu.active>span:nth-child(3) {
     color: #f8fc03;
 }
 
-.menu {
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -214,7 +214,7 @@ header #navMenu.active>span:nth-child(3) {
     margin-left: 30px;
 }
 
-.menu .social li {
+.nav-menu .social li {
     margin-left: 20px;
     margin-bottom: 0;
 }
@@ -238,7 +238,7 @@ header .menu li:hover::after {
     transform: scaleX(1);
 }
 
-.menu .social li:first-child {
+.nav-menu .social li:first-child {
     margin-left: 0;
 }
 
@@ -262,17 +262,19 @@ header .menu li:hover::after {
     color: #f8fc03;
 }
 
-.menu .social {
+.nav-menu .social {
     display: none;
 }
 
-.menu .social li {
+.nav-menu .social li {
     padding: 10px 14px;
     border-radius: 30px;
     margin-right: -20px;
 }
-
-.menu .social li a:hover {
+.nav-menu .social li a {
+    color: #fff;
+}
+.nav-menu .social li a:hover {
     color: #262626;
 }
 
@@ -305,6 +307,7 @@ header .logo h1 img a {
 }
 
 .main-text h1 {
+    font-size: 36px;
     color: #fff;
     display: inline-block;
     border-bottom: 1px solid #454545;
@@ -342,9 +345,9 @@ header .logo h1 img a {
     border: 1px solid transparent;
     border-radius: 10px;
     transition: 0.3s ease-in;
-    background: #999999;
+    /* background: #999999; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-blend-mode: lighten;
+    
 
 }
 
@@ -356,6 +359,7 @@ header .logo h1 img a {
 
 .update ul li:hover img {
     transform: scale(1.03);
+    
 }
 
 .update ul li:nth-child(3n){
@@ -368,7 +372,10 @@ header .logo h1 img a {
 .update ul li .img-box {
     width: 100%;
     overflow: hidden;
+    background-image:linear-gradient(to top, rgba(229, 24, 24, 0.609), rgba(255, 0, 0, 0),white max(9.5rem, 27vh));
+    mix-blend-mode: var(--card-blend-mode);
     border-radius: 10px;
+    
 }
 
 .update ul li img {
@@ -376,6 +383,7 @@ header .logo h1 img a {
     display: block;
     border-radius: 10px;
     transition: .5s ease;
+    
 }
 
 .update ul li h6 {
@@ -466,8 +474,8 @@ header .logo h1 img a {
 }
 
 .main-text h1 span {
+    font-size: 36px;
     color: #ffff;
-    font-size: 46px;
     display: block;
 }
 
@@ -1068,23 +1076,36 @@ footer .bottom small {
         width: 16x;
     }
 
-    .menu {
-        display: block;
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         visibility: hidden;
         opacity: 0;
-        height: 300px;
         position: fixed;
-        top: 0;
+        bottom: 30px;
         right: 100%;
-        height: 100vh;
-        padding-top: 80px;
-        justify-content: center;
-        background-color: #7e7e7e;
+        height: 500px;
         width: 100%;
-        border-radius: 4px;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .overlay {
+        display: block;
+        background: rgba(5, 5, 5, 0.477);
+        backdrop-filter: blur(20px);
+        width: 95%;
+        height: 96vh;
+        position: fixed;
+        bottom: 10px;
+        left: -100%;
+        transform: translate(-50%, 0);
+        border-radius: 20px;
+        transition: .3s ease;
+    }
+    .overlay.active {
+        left: 50%;
     }
 
     .menu li {
@@ -1093,21 +1114,20 @@ footer .bottom small {
         margin: 0 auto;
     }
 
-    .alter-header .nav-menu .menu a {
-        color: #454545;
+    .alter-header .overlay {
+        z-index: 2;
     }
-
     .alter-header .nav-menu .menu a:hover {
         color: #fff;
     }
 
-    .nav-menu .menu.active {
+    .nav-menu.active {
         right: 0;
         visibility: visible;
         opacity: 1;
     }
 
-    .menu ul.social {
+    .nav-menu ul.social {
         display: block;
         display: flex;
         justify-content: center;
@@ -1124,7 +1144,7 @@ footer .bottom small {
         margin-bottom: 40px;
     }
 
-    .menu .social li {
+    .nav-menu .social li {
         margin-right: 0;
     }
 
