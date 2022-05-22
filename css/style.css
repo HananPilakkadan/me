@@ -47,7 +47,7 @@ html {
 
 
 body {
-    background-color: #7d7d7d;
+    background-color: #1b2022;
     font-family: 'gilroy-mediumuploaded_file';
 }
 
@@ -136,7 +136,9 @@ header #navMenu.active {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
+header #navMenu.active span {
+    background-color: #f8fc03;
+}
 header #navMenu.active>span:nth-child(2) {
     width: 0;
 }
@@ -206,7 +208,7 @@ header #navMenu.active>span:nth-child(3) {
     color: #f8fc03;
 }
 
-.nav-menu {
+.nav-menu ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -343,9 +345,9 @@ header .logo h1 img a {
     margin:0 30px 30px 0;
     padding: 30px;
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: 0.3s ease-in;
-    /* background: #999999; */
+    background: #2D3539;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     
 
@@ -353,8 +355,8 @@ header .logo h1 img a {
 
 .update ul li:hover {
     transform: scale(1.02);
-    background: #979797;
-    border: 1px solid #f8fc03;
+    background: #48545B;
+    /* border: 1px solid #f8fc03; */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;}
 
 .update ul li:hover img {
@@ -397,7 +399,7 @@ header .logo h1 img a {
 
 .update ul li a.more {
     padding: 10px 25px;
-    background: #474747;
+    background: #242A2E;
     color: #f8f8f8;
     display: flex;
     align-items: center;
@@ -464,13 +466,13 @@ header .logo h1 img a {
 
 .message h1.icon a {
     font-size: 200px;
-    color: #474747;
+    color: #515E67;
     opacity: 30%;
 
 }
 
 .message .content span a {
-    color: #474747;
+    color: #515E67;
 }
 
 .main-text h1 span {
@@ -483,13 +485,12 @@ header .logo h1 img a {
 
 .about {
     text-align: center;
-    margin-top: 80px;
 
 }
 
 .about .top {
     padding: 0 50px;
-    background-color: #979797;
+    background-color: #2D3539;;
     width: 50%;
     margin: 0 auto;
     border-radius: 20px;
@@ -504,16 +505,16 @@ header .logo h1 img a {
 }
 
 .profile-info h3 {
-    color: #474747;
-    font-size: 22px;
-    margin-bottom: 12px;
+    color: #A4AFB7;
+    font-size: 26px;
+    margin-bottom: 6px;
     font-weight: 500;
     line-height: 1.2em;
 }
 
 .profile-info span {
-    color: #454545;
-    font-size: 16px;
+    color: #6C7D89;
+    font-size: 18px;
 }
 
 .about h1 {
@@ -545,16 +546,36 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 50px auto;
 
 }
-
-.content-box img {
-    width: 30%;
+.content-box .avatar {
+    width: 120px;
+    position: relative;
+    z-index: 2;
+}
+.content-box .avatar .vector{
+    width: 130%;
+    right: -10px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    animation: vector 10s infinite;
+}
+@keyframes vector {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+.content-box img.avatar-dp {
+    width: 100%;
+    display: block;
     max-width: 200px;
-    border-radius: 100%;
-    margin: 50px 0;
-    padding: 8px;
-    border: 2px dashed #f8fc03;
+    border-radius: 40px;
 
 }
 
@@ -565,7 +586,8 @@ h4 {
 }
 
 .about-info p {
-    color: #454545;
+    color: #BAC3C9;
+    font-size: 18px;
     line-height: 25px;
     letter-spacing: 0.5px;
     margin-bottom: 50px;
@@ -585,10 +607,11 @@ h4 {
 }
 
 .about .skill h1 {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;  
     margin-top: 0;
-    color: #474747;
-    font-weight: 500;
+    color: #A4AFB7;
+    letter-spacing: 1px;
 }
 
 .about .skill ul {
@@ -599,6 +622,7 @@ h4 {
 
 .about .skill ul li {
     margin-right: 20px;
+    width: 30px;
 }
 
 .about .skill ul li:last-child {
@@ -606,7 +630,8 @@ h4 {
 }
 
 .about .skill ul li img {
-    width: 30px;
+    width: 100%;
+    display: block;
     filter: invert(1);
     opacity: 50%;
 }
@@ -616,16 +641,16 @@ h4 {
 }
 
 .education .item h1 {
-    color: #474747;
+    color: #BAC3C9;
     opacity: 0.3;
 }
 
 .education .item {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    background-color: #979797;
-    width: 30%;
+    background-color: #2D3539;
+    width: 35%;
     margin: 0 auto;
     padding: 0 50px;
     margin-bottom: 20px;
@@ -633,14 +658,17 @@ h4 {
 }
 
 .education .item p {
-    color: #474747;
+    color: #BAC3C9;
     margin-left: 50px;
     display: block;
     margin-bottom: 10px;
+    font-size: 18px;
 }
-
+.education .item .content {
+    width: 90%;
+}
 .education .item .content span {
-    color: #474747;
+    color: #BAC3C9;
 }
 
 /*Gallery*/
@@ -708,6 +736,75 @@ h4 {
     font-weight: 400;
 }
 
+.contact .container {
+    width: 200px;
+    margin: 40px auto;
+    opacity: .7;
+}
+.contact .container img{
+    width: 100%;
+    -webkit-animation: wobble-hor-bottom 3s infinite;
+	        animation: wobble-hor-bottom 3s infinite;
+}
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
 .contact-container {
     justify-content: center;
     display: flex;
@@ -718,14 +815,22 @@ h4 {
 .contact-container ul {
     display: flex;
     align-items: center;
-    padding: 30px;
+}
+.contact-container ul li {
+    background: #2D3539;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
 
+.contact-container ul li:last-child{
+    margin-right: 0;
+}
 .contact-container ul li p {
-    color: #474747;
+    color: #BAC3C9;
     letter-spacing: 1.5px;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-left: 6px;
     font-size: 16px;
 }
 
@@ -738,18 +843,17 @@ h4 {
 }
 
 .contact-container ul li a {
-    display: block;
+    /* display: block; */
     text-align: center;
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 30px;
+    padding: 30px 80px;
+    display: flex;
+    align-items: center;
 }
 
 .contact-container ul li a img {
     width: 50px;
     margin-right: 150px;
     margin: 0 auto;
-    margin-bottom: 30px;
     transition: .3s ease;
 }
 
@@ -798,7 +902,7 @@ footer .bottom {
 }
 
 footer .bottom small {
-    color: #262626;
+    color: #48535B;
     padding: 20px 0;
 }
 
@@ -880,10 +984,6 @@ footer .bottom small {
         margin-bottom: 0;
     }
 
-    .about-info {
-        width: 70%;
-    }
-
     .about-info p {
         font-size: 14px;
     }
@@ -923,33 +1023,25 @@ footer .bottom small {
         height: 173.33px;
     }
 
-    .contact-container ul li a p {
-        font-size: 10px;
+   
+    .content-box .avatar {
+        width: 110px;
     }
-
     .about .top {
         width: 70%;
     }
-
-    .about-info {
-        width: 65%;
+    .education .item p {
+        font-size: 16px;
     }
 
     .about-info p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .education .item {
         width: 50%;
     }
 
-    .contact-container ul li a img.call {
-        width: 30px;
-    }
-
-    .contact-container ul li a img.mail {
-        width: 40px;
-    }
 
     .main-text {
         margin-top: 100px;
@@ -957,6 +1049,9 @@ footer .bottom small {
 }
 
 @media all and (max-width: 768px) {
+    .nav-menu ul.menu {
+        flex-direction: column;
+    }
     header {
         justify-content: space-between;
     }
@@ -988,11 +1083,6 @@ footer .bottom small {
         margin-bottom: 20px;
     }
 
-    .about-info p {
-        font-size: 12px;
-        padding: 0 20px;
-    }
-
     .about-info {
         padding-bottom: 20px;
     }
@@ -1006,7 +1096,6 @@ footer .bottom small {
     }
 
     .about .skill ul li img {
-        width: 20px;
         margin-bottom: -20px;
     }
 
@@ -1024,15 +1113,10 @@ footer .bottom small {
     }
 
     .contact-container ul li a p {
-        font-size: 9px;
+        font-size: 16px;
     }
-
-    .contact-container ul li a img.call {
-        width: 25px;
-    }
-
-    .contact-container ul li a img.mail {
-        width: 35px;
+    .contact-container ul li a img {
+        width: 45px;
     }
 
     .contact-us h1 {
@@ -1047,12 +1131,9 @@ footer .bottom small {
         font-size: 25px;
     }
 
-    .about-info {
-        width: 80%;
-    }
 
     .about-info p {
-        line-height: 20px;
+        line-height: 1.5em;
     }
 
     .main-text h1 {
@@ -1093,9 +1174,8 @@ footer .bottom small {
     }
     .overlay {
         display: block;
-        background: rgba(5, 5, 5, 0.477);
-        backdrop-filter: blur(20px);
         width: 95%;
+        
         height: 96vh;
         position: fixed;
         bottom: 10px;
@@ -1104,8 +1184,20 @@ footer .bottom small {
         border-radius: 20px;
         transition: .3s ease;
     }
+    
     .overlay.active {
         left: 50%;
+    }
+    @supports (backdrop-filter: blur(20px)){
+        .overlay {
+            backdrop-filter: blur(20px);
+            background: rgba(5, 5, 5, 0.477);
+        } 
+    }
+    @supports not (backdrop-filter: blur(20px)){
+        .overlay {
+            background: #1d1d1d;
+        } 
     }
 
     .menu li {
@@ -1125,6 +1217,7 @@ footer .bottom small {
         right: 0;
         visibility: visible;
         opacity: 1;
+        z-index: 44;
     }
 
     .nav-menu ul.social {
@@ -1186,19 +1279,44 @@ footer .bottom small {
     .gallery h1 {
         font-size: 24px;
     }
-
+    .content-box .avatar {
+        width: 100px;
+    }
+    .about h3 {
+        font-size: 20px;
+    }
+    .profile-info span {
+        font-size: 16px;
+    }
     .about h1 {
         font-size: 24px;
+        
+    }
+    .about .skill h1{
+        margin-bottom: 12px;
     }
 
-    .about-info {
-        width: 90%;
+    .about-info p{
+        margin-bottom: 20px;
     }
-
+    .education .item .content {
+        width: 100%;
+    }
+    .education .item {
+        width: 65%;
+    }
     .contact .bottom a {
         padding: 6px 14px;
     }
+    .contact-container ul {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    .contact-container ul li {
+        margin:20px 0 0 0;
+    }
 }
+
 
 @media all and (max-width: 480px) {
     .menu-active .menu {
@@ -1258,27 +1376,38 @@ footer .bottom small {
     }
 
     .about-info p {
-        font-size: 12px;
-        padding: 0 40px;
-        line-height: 16px;
+        font-size: 14px;
         margin-bottom: 0;
     }
-
+    .content-box .avatar {
+        width: 90px;
+    }
+    .img-box .content-box {
+        margin: 20px auto;
+    }
     .about .top {
         padding-bottom: 30px;
     }
 
     .about .skill h1 {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .education .item h1 {
         font-size: 18px;
+        margin-bottom: 24px;
+    }
+    .about .skill ul {
+        margin-bottom: 20px;
+    }
+    .about .skill ul li {
+        width: 26px;
+    }
+    .education .head h1{
+        margin-bottom: 16px;
+    }
+    .education .item h1 {
+        font-size: 22px;
     }
 
     .education .item p {
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 30px;
     }
 
@@ -1328,6 +1457,12 @@ footer .bottom small {
     .contact .bottom a img {
         width: 14px;
         margin-bottom: 2px;
+    }
+    .contact .container {
+        width: 150px; 
+    }
+    .contact-container ul li a p {
+        font-size: 14px;
     }
 }
 
@@ -1482,9 +1617,6 @@ footer .bottom small {
         margin: 0 auto;
     }
 
-    .about .skill ul li img {
-        width: 10px;
-    }
 
     .education .item p {
         font-size: 8px;
