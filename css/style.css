@@ -81,10 +81,6 @@ ul {
     transition: 0.4s ease-in;
 }
 
-/* .sticky .home {
-    filter: opacity(0.4);
-} */
-
 .menu-active {
     overflow: hidden;
     touch-action: none;
@@ -97,13 +93,27 @@ ul {
     filter: blur(3px);
     transition: all 0.5s ease-in-out;
 }
-
 header {
+    
+    background-color:#1b2022;
+}
+header .wrapper{
     display: flex;
-    padding: 0px 35px;
     align-items: center;
     height: 100px;
     z-index: 44;
+    
+}
+@keyframes sticky-header {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+header.sticky .wrapper {
+    height: 80px;
 }
 
 /* hamburger */
@@ -1113,7 +1123,7 @@ footer .bottom small {
     .nav-menu ul.menu {
         flex-direction: column;
     }
-    header {
+    header .wrapper{
         justify-content: space-between;
     }
 
@@ -1390,7 +1400,7 @@ footer .bottom small {
     }
 
     .update h1 {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .update ul {
