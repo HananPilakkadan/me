@@ -315,6 +315,7 @@ header .logo h1 img a {
     border-bottom: 1px solid #454545;
     font-weight: 500;
     line-height: 1.8em;
+    
 }
 
 .main-text small {
@@ -390,7 +391,7 @@ header .logo h1 img a {
 
 .update ul li h6 {
     text-transform: uppercase;
-    color: #f8f8f8;
+    color: #BAC3C9;
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 500;
@@ -449,19 +450,81 @@ header .logo h1 img a {
 }
 
 .message .content h1 {
-    animation: flip-diagonal-1-bl 2.3s infinite;
+    -webkit-animation: heartbeat 2s ease-in-out infinite both;
+	        animation: heartbeat 2s ease-in-out infinite both;
 }
 
-@keyframes flip-diagonal-1-bl {
-    0% {
-        transform: rotateY(0deg);
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
     }
-
-    100% {
-
-        transform: rotateY(-360deg);
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
     }
-}
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+  
+
 
 
 .message h1.icon a {
@@ -479,6 +542,7 @@ header .logo h1 img a {
     font-size: 36px;
     color: #ffff;
     display: block;
+    letter-spacing: 10px;
 }
 
 /*About*/
@@ -685,7 +749,7 @@ h4 {
 .gallery p {
     text-align: center;
     font-size: 18px;
-    color: #474747;
+    color: #BAC3C9;
     letter-spacing: 2px;
 }
 
@@ -919,7 +983,7 @@ footer .bottom small {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: #262626;
+    background: #1b2022;
     z-index: 999;
 }
 
@@ -932,16 +996,13 @@ footer .bottom small {
 #loader span {
     width: 20px;
     height: 20px;
-    background: #818181;
+    background: #BAC3C9;
     margin-right: 20px;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
     animation: loader 2s infinite;
 }
 
-#loader span:nth-child(1) {
-    animation-delay: 0.25s;
-}
 
 #loader span:nth-child(2) {
     animation-delay: 0.5s;
@@ -1179,6 +1240,7 @@ footer .bottom small {
         height: 96vh;
         position: fixed;
         bottom: 10px;
+        top: 10px;
         left: -100%;
         transform: translate(-50%, 0);
         border-radius: 20px;
@@ -1207,7 +1269,7 @@ footer .bottom small {
     }
 
     .alter-header .overlay {
-        z-index: 2;
+        z-index: 4;
     }
     .alter-header .nav-menu .menu a:hover {
         color: #fff;
@@ -1324,7 +1386,7 @@ footer .bottom small {
     }
 
     .main-text h1 span {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .update h1 {
